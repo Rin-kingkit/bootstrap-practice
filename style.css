@@ -9,7 +9,7 @@ body{
     overflow-x: hidden;
 }
 :root{
-    --color-main: #ffd400;
+    --color-main: #ffd818;
     --color-background:linear-gradient(135deg,#1B2C47,#000);
 }
 a{
@@ -159,7 +159,7 @@ header{
 .svg1{
     
     transform: rotate(-37deg);
-    width: 66%;
+    height: 90%;
     left: 36%;
     top: 28%;
 }
