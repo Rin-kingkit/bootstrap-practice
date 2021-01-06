@@ -11,6 +11,10 @@ body{
 :root{
     --color-main: #ffd000;
     --color-background:linear-gradient(135deg,#1B2C47,#000);
+    --color-accent:#8C7CCE;
+}
+h2{
+    font-size: 34px;
 }
 a{
     color: #fff;
@@ -34,7 +38,7 @@ header{
     width: unset;
 }
 .navbar-list{
-    gap: 10px;
+    gap: 20px;
 }
 
 .banner{
@@ -77,7 +81,7 @@ header{
 }
 .intro-box svg{
     width: 50px;
-    color:var(--color-main);
+    color:#1B2C47;
 }
 .webbit{
     background-color: #000;
@@ -109,13 +113,34 @@ header{
 .btn-webbit{
     background-color:var(--color-main);
     color: #000;
-    
+    overflow: hidden;
+    border: none;
+}
+.btn-webbit:after{
+    content: "";
+    display: block;
+    width: 145%;
+    height: 100px;
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    z-index: 2;
+    background-color: rgba(245, 148, 2, 0.39);
+    background-color: var(--color-accent);
+    transition: 0.3s;
+    border-radius: 20%;
 }
 .btn-webbit a{
     color: #000;
+    z-index: 3;
+    transition: 0.25s;
 }
-.btn-webbit:hover{
-    color: #000;
+.btn-webbit:hover a{
+    color: #fff;
+}
+.btn-webbit:hover:after {
+    top:-30%;
+    left: 0;
 }
 .btn-webbit:active{
     color: #000;
@@ -168,8 +193,15 @@ header{
     transform: rotate(-37deg);
     width: 5%;
     left: 10%;
-    top: 120%;
+    top: 127%;
 }
+.svg3{
+    transform: rotate(110deg);
+    left: 4%;
+    top: 8%;
+    width: 7%;
+}
+
 .how{
     background: var(--color-background);
     color: #fff;
@@ -181,6 +213,8 @@ header{
     text-align: center;
     gap: 14px;
     flex-direction: column;
+    max-width: 425px;
+    margin: auto;
 }
 .how-box:hover .how-icon img{
     top: 30%;
@@ -234,6 +268,34 @@ header{
     left: 16%;
 }
 
+.iot-content{
+    gap: 30px;
+}
+.iot-content-box{
+    padding-left: 80px;
+    max-width: 540px;
+}
+.iot-content-box:before{
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-image: url(iot-icon.svg);
+    position: absolute;
+    z-index: 1;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: -70px;
+}
+.bit-arrow img{
+    width: 60%;
+    margin: auto;
+}
+
+
+
+
+
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
 
@@ -251,6 +313,7 @@ header{
     }
     .webbit-row{
         flex-direction: unset;
+        padding: 80px 0;
     }
     .svg1{
         width: 73%;
