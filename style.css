@@ -292,7 +292,9 @@ header{
     margin: auto;
 }
 
-
+#card .col{
+    height: 340px;
+}
 
 
 
